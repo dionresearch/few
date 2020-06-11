@@ -23,7 +23,8 @@ from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import cross_val_score, train_test_split, KFold
 from sklearn.metrics import r2_score, accuracy_score, roc_auc_score
-from sklearn.preprocessing import Imputer, StandardScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.impute import SimpleImputer
 from sklearn.utils import check_random_state
 from DistanceClassifier import DistanceClassifier
 import numpy as np
@@ -34,7 +35,7 @@ import itertools as it
 import pdb
 from collections import defaultdict
 # from update_checker import update_check
-from sklearn.externals.joblib import Parallel, delayed
+from joblib import Parallel, delayed
 from tqdm import tqdm
 import uuid
 
@@ -433,7 +434,7 @@ class FEW(SurvivalMixin, VariationMixin, EvaluationMixin, PopMixin,
 
     def impute_data(self,x):
         """Imputes data set containing Nan values"""
-        imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
+        imp = SimpleImputer(missing_values='NaN', strategy='mean', axis=0)
         return imp.fit_transform(x)
 
     def clean(self,x):
