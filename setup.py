@@ -65,10 +65,10 @@ e-mail: lacava@upenn.edu
 This project is hosted at https://github.com/lacava/few
 ''',
     zip_safe=True,
-    install_requires=['numpy', 'scipy', 'pandas', 'scikit-learn',
+    install_requires=['numpy', 'scipy', 'pandas', 'scikit-learn', 'joblib',
                       'update_checker', 'tqdm', 'joblib','DistanceClassifier',
                       'scikit-mdr','Cython', 'eigency'],
-    setup_requires=['numpy', 'scipy', 'pandas', 'scikit-learn',
+    setup_requires=['numpy', 'scipy', 'pandas', 'scikit-learn', 'joblib',
                       'update_checker', 'tqdm', 'joblib','DistanceClassifier',
                       'scikit-mdr','Cython', 'eigency'],
     classifiers=[

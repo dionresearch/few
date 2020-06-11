@@ -13,8 +13,9 @@ import itertools as it
 import sys
 from sklearn.metrics.pairwise import pairwise_distances
 # from profilehooks import profile
-from sklearn.externals.joblib import Parallel, delayed
+from joblib import Parallel, delayed
 from sklearn.feature_selection import f_classif, f_regression
+
 # safe division
 def divs(x,y):
     """safe division"""
