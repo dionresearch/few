@@ -3,6 +3,17 @@
 [![Coverage Status](https://coveralls.io/repos/github/lacava/few/badge.svg?branch=master)](https://coveralls.io/github/lacava/few?branch=master)
 [![DOI](https://zenodo.org/badge/65411376.svg)](https://zenodo.org/badge/latestdoi/65411376)
 
+# Dion Research Fork
+
+**NOTE**:
+
+If you ran into this repository, support for modern scikit-learn can be installed with:
+
+pip install git+https://github.com/dionresearch/few.git@recent_scikit_learn_support
+
+This will live here for now as the original repo is not accepting pull requests.
+
+
 # Few
 
 **Few** is a **Feature Engineering Wrapper** for scikit-learn. Few looks for a set of feature transformations that work best with a specified machine learning algorithm in order to improve model estimation and prediction. In doing so, Few is able to provide the user with a set of concise, engineered features that describe their data.
